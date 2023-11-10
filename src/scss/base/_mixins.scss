@@ -24,6 +24,12 @@
     }
 }
 
+@mixin grid($columns, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;   
+}
+
 // @mixin heading($color: black, $border-radius: false) {
 //     text-transform: uppercase;
 //     font-size: 2.4rem;

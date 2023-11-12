@@ -30,6 +30,12 @@
     gap: $gap;   
 }
 
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 // @mixin heading($color: black, $border-radius: false) {
 //     text-transform: uppercase;
 //     font-size: 2.4rem;

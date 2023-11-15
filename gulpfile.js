@@ -26,7 +26,7 @@ function imagenes(callback){
     
     src('src/img/**/*.{png,jpg}')
         .pipe(cache(imagemin(opciones)))
-        .pipe(dest('build/img/jpng'))
+        .pipe(dest('build/img'))
 
     callback();
 }
@@ -39,7 +39,7 @@ function formatoWebp(callback){
     
     src('src/img/**/*.{png,jpg}')
         .pipe(webp(opciones))
-        .pipe(dest('build/img/webp'))
+        .pipe(dest('build/img'))
 
     callback();
 }
@@ -51,18 +51,27 @@ function formatoAvif(callback){
     
     src('src/img/**/*.{png,jpg}')
         .pipe(avif(opciones))
-        .pipe(dest('build/img/avif'))
+        .pipe(dest('build/img'))
 
     callback();
+}
+
+function javascript(callback){
+    src('src/js/**/*.js')
+        .pipe(dest('build/js'))
+
+    callback()
 }
 
 function dev(callback){
     watch('src/scss/**/*.scss', css)
+    watch('src/js/**/*.js', javascript)
     callback();
 }
 
 exports.css = css;
+exports.javascript = javascript;
 exports.imagenes = imagenes
 exports.formatoWebp = formatoWebp;
 exports.formatoAvif = formatoAvif;
-exports.dev = parallel(imagenes, formatoWebp, formatoAvif, dev);
+exports.dev = parallel(imagenes, formatoWebp, formatoAvif, javascript, dev);

@@ -6,6 +6,7 @@
     h3 {
         text-align: center;
         color: v.$blanco;
+        margin-bottom: 2rem
     }
     .contenido-boletos {
         @include m.tablet {

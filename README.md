@@ -7,4 +7,5 @@
 - Página 100% responsiva utilizando media query's dentro de los mixins
 
 Visita el sitio web en: https://festivalcro.netlify.app/
+
 ![image](https://github.com/CRISTIANMX19/Festival/assets/106282711/fdd6a388-7049-4efc-a40e-3dd8658aeaed)

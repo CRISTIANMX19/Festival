@@ -5,3 +5,5 @@
 - Se creó una tarea para agregar el código de Js a la carpeta de destino
 - Se utilizaron los Mixins para agilizar el código CSS
 - Página 100% responsiva utilizando media query's dentro de los mixins
+
+Visita el sitio web en: https://festivalcro.netlify.app/

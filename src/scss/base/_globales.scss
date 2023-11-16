@@ -16,6 +16,10 @@ body {
     &.fijar-body {
         overflow: hidden;
     }
+
+    &.fijo-body {
+        padding-top: 86px;
+    }
 }
 p {
     font-size: 2rem;
